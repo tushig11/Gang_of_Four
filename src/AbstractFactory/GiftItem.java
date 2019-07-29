@@ -14,4 +14,24 @@ public class GiftItem {
 		this.packagingType = type;
 		this.packaging = pack;
 	}
+	
+	public String getGiftId() {
+		return giftId;
+	}
+	
+	public String getGiftName() {
+		return giftName;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+	
+	public String getPackagingType() {
+		return packagingType;
+	}
+	
+	public Packaging getPackaging() {
+		return packaging;
+	}
 }
