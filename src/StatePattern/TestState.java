@@ -3,7 +3,7 @@ package StatePattern;
 public class TestState {
 	public static void main(String[] args) {
 		CarRace game = new CarRace();
-		//default road regular
+		
 		System.out.println(game);
 		game.turnLeft();
 		game.Accel();
