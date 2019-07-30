@@ -1,14 +1,2 @@
-/AbstractFactory/
-/Adapter/
-/CoR/
-/Command/
-/Composite/
-/Factory/
-/Iterator/
-/Prototype/
-/Singleton/
-/Template/
-/AbstractFactoryClass/
-/Builder/
-/Flyweight/
-/Facade/
+/State/
+/StatePattern/
