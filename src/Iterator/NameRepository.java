@@ -9,7 +9,7 @@ Rewrite the NameIterator class that implements the same Iterator interface.
 But make sure that a “-” is never returned by the next() method. */
 
 public class NameRepository implements Aggregate{
-	private String names[] = {"Rob" , "Ben" ,"Jul" , "-", "Pat", "Ken"};
+	private String names[][] = {{"+", "Rob"} , {"-", "Ben"} ,{"-", "Jul"} , {"+", "Pat"}, {"+", "Ken"}};
 	//other methods of the NameRepository
 	@Override
 	public Iterator getIterator() {
@@ -21,7 +21,7 @@ public class NameRepository implements Aggregate{
 		public boolean hasNext() {
 			
 			if(index < names.length){
-				boolean inValid = names[index].equals("-");
+				boolean inValid = names[index][0].equals("-");
 				if(inValid && index+1 != names.length)
 					index++;
 					if(inValid && index+1==names.length)
@@ -34,9 +34,9 @@ public class NameRepository implements Aggregate{
 		@Override
 		public Object next() {
 			if(this.hasNext()){
-				if(names[index].equals("-") && index+1 != names.length)
+				if(names[index][0].equals("-") && index+1 != names.length)
 					index++;
-				return names[index++];
+				return names[index++][1];
 			}
 			return null;
 		}
