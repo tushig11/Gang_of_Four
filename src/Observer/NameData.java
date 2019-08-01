@@ -39,13 +39,13 @@ public class NameData implements Subject{
 	}
 	
 	public void addName(String name) {
-		System.out.println("--> Action add <--");
+		System.out.println("--> Action add: " + name + " <--");
 		this.names.add(name);
 		sendNameData();
 	}
 	
 	public void removeName(String name) {
-		System.out.println("--> Action remove <--");
+		System.out.println("--> Action remove: "+name+" <--");
 		this.names.remove(name);
 		sendNameData();
 	}

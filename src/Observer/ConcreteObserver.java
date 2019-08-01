@@ -17,7 +17,10 @@ public class ConcreteObserver implements Observer{
 	}
 
 	public void display() {
-		System.out.println("--> Data <--");
-		names.stream().forEach(System.out::println);
+		System.out.print("--> Data: ");	
+		for(String n: names) {
+			System.out.print(n+" ");
+		}
+		System.out.println();
 	}
 }

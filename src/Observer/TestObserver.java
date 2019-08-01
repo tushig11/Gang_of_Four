@@ -18,5 +18,6 @@ public class TestObserver {
 		data.addName("Bryan");
 		data.addName("Steve");
 		data.removeName("Bryan");
+		data.addName("Ken");
 	}
 }
