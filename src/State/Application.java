@@ -15,7 +15,12 @@ public class Application {
 		 System.out.println("Account type = "+ffaccount.getAccountType());
 		 System.out.println("miles = "+ffaccount.getNumberOfMiles());
 		 
-		 ffaccount.addFlight(69000);
+		 ffaccount.addFlight(50000);
+		 System.out.println("Accountnr = "+ffaccount.getAccountNumber());
+		 System.out.println("Account type = "+ffaccount.getAccountType());
+		 System.out.println("miles = "+ffaccount.getNumberOfMiles());
+		 
+		 ffaccount.addFlight(50000);
 		 System.out.println("Accountnr = "+ffaccount.getAccountNumber());
 		 System.out.println("Account type = "+ffaccount.getAccountType());
 		 System.out.println("miles = "+ffaccount.getNumberOfMiles());
