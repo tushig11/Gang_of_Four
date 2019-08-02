@@ -4,7 +4,7 @@ public class Gold implements AccountState {
 
 	private String name = "Gold";
 	private FFAccount myAccount;
-	private AccountState nextState;
+	private AccountState nextState = new Platinium(myAccount);;
 	
 	public Gold(FFAccount account) {
 		this.myAccount = account;
@@ -24,7 +24,6 @@ public class Gold implements AccountState {
 
 	public void checkForUpdate(){
 		if ((myAccount.getNumberOfMiles() > 150.000)|| (myAccount.getNumberOfFlights() > 145)){
-			nextState = new Platinium(myAccount);
 			myAccount.setAccountType(nextState);
 		} 	
 	}

@@ -4,7 +4,7 @@ public class Silver implements AccountState {
 	
 	private String name = "Silver";
 	private FFAccount myAccount;
-	private AccountState nextState;
+	private AccountState nextState = new Gold(myAccount);;
 	
 	public Silver(FFAccount account) {
 		this.myAccount = account;
@@ -25,7 +25,6 @@ public class Silver implements AccountState {
 	
 	public void checkForUpdate(){
 		if ((myAccount.getNumberOfMiles() > 75000)|| (myAccount.getNumberOfFlights() > 75)){
-			nextState = new Gold(myAccount);
 			myAccount.setAccountType(nextState);
 		} 	
 	}

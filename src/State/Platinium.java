@@ -4,7 +4,7 @@ public class Platinium implements AccountState{
 
 	private String name = "Platinium";
 	private FFAccount myAccount;
-	//private AccountState nextState;
+	//private AccountState nextState = newState;
 	
 	public Platinium(FFAccount account) {
 		this.myAccount = account;
