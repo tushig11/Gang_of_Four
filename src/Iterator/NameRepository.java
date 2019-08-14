@@ -8,7 +8,7 @@ When you remove a name, you simply replace the name with a “-”.
 Rewrite the NameIterator class that implements the same Iterator interface. 
 But make sure that a “-” is never returned by the next() method. */
 
-public class NameRepository implements Aggregate{
+public class NameRepository implements Collection{
 	private String names[][] = {{"+", "Rob"} , {"-", "Ben"} ,{"-", "Jul"} , {"+", "Pat"}, {"+", "Ken"}};
 	//other methods of the NameRepository
 	@Override

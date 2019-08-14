@@ -6,30 +6,46 @@ import java.util.List;
 public class GiftPack {
 	private List<GiftItem> giftItems;
 	private Address shippingAddress;
-	private String packType; //"Business", "Adults", or "Kids"
+	private PackType packType; //"Business", "Adults" or "Kids"
 	
-	GiftPack(String type){
+	public GiftPack(Address addr, PackType type)
+	{
 		this.giftItems = new ArrayList<>();
+		this.shippingAddress = addr;
 		this.packType = type;
 	}
 	
-	public Address getShippingAddress() {
-		return shippingAddress;
+	public void add(GiftItem item)
+	{
+		giftItems.add(item);
 	}
 	
-	public String getPackType() {
-		return packType;
-	}
-	
-	public List<GiftItem> getGiftItems() {
+	public List<GiftItem> getGiftItems()
+	{
 		return giftItems;
 	}
 	
-	public void setShippingAddress(Address shippingAddress) {
-		this.shippingAddress = shippingAddress;
+	public Address getShippingAddress()
+	{
+		return shippingAddress;
 	}
 	
-	public void addItem(GiftItem item){
-		this.giftItems.add(item);
+	public PackType getPackType()
+	{
+		return packType;
+	}
+	
+	public float calculateCost()
+	{
+		float sum = 0;
+		
+		for(GiftItem item : giftItems)
+		{
+			sum += item.getPackaging().getCost();
+		}
+		
+		System.out.println("Total cost: " + sum);
+		
+		return sum;
 	}
 }
